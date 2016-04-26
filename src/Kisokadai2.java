@@ -23,7 +23,7 @@ public class Kisokadai2 {
 
 		System.out.println("数当てゲームです。１～１００の数字を入力してください。");
 		System.out.println("終了は１０００を入力してください。");
-		answer = new java.util.Random().nextInt(100);
+		answer = new java.util.Random().nextInt(101);
 		//System.out.println(answer);
 
 		String str = null;
@@ -58,36 +58,36 @@ public class Kisokadai2 {
 					  		System.out.println("すごい！！一発で正解です！");
 					  		break;
 					  	} else {
-					  		System.out.println("正解です！終了します。");
-							System.out.println(count + "回目で正解しました。");
+					  		System.out.println("正解です！" + count + "回目で正解しました。");
 							break;
 					  	}
 
 				  	}
 
 				}
-			System.out.println("もう一度やりますか？");
-			System.out.println("続ける y | やめる y");
+			System.out.println("終了しますか？");
+			System.out.println("続けるときは5を入力してください。");
+			System.out.println("それ以外のキー入力で終了します。");
+
+
 
 			try {
 				BufferedReader fin = new BufferedReader(new InputStreamReader(System.in));
 				finish = fin.readLine();
 
-					if (finish.equals("n")) {
-						System.out.println("Adios...");
-						break;
-					}
-					else if (finish.equals("y")) {
+					if (finish.equals("5")) {
 						count = 0;
 						continue;
-					} else {
-						System.out.println("続ける y | やめる n");
+					} else  {
+						System.out.println("Bye...");
+						break;
 					}
 
 
 			}	catch (Exception e) {
-					e.printStackTrace();
+					break;
 				}
+
 
 		}
 

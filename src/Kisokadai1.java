@@ -41,7 +41,7 @@ public class Kisokadai1 {
 			ver = br.readLine();
 			y = Integer.parseInt(ver);
 		}	catch (Exception e) {
-			System.out.println("2数字を入力してください。");
+			System.out.println("数字を入力してください。");
 			continue;
 			}
 
@@ -59,7 +59,6 @@ public class Kisokadai1 {
 			break;
 
 	}
-
 
 	}
 
